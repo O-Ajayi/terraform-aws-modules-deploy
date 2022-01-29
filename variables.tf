@@ -44,3 +44,20 @@ variable "vpc_tags" {
     Environment = "dev"
   }
 }
+
+
+###############################################
+#### Input Variables for ec2 instance #########
+###############################################
+
+variable "instance_name" {
+  description = "Name to be used on all resources as prefix"
+  type        = string
+  default     = "my-ec2-cluster"
+}
+
+variable "instance_type" {
+  description = "The type of instance to start"
+  type        = string
+  default     = "t2.micro"
+}
